@@ -1,0 +1,784 @@
+
+/* =================================
+   1. CONFIGURACIÓN GENERAL
+================================= */
+
+:root {
+    --gold: #D4AF37;
+    --gold-light: #F0D77A;
+    --black: #111111;
+    --dark: #1A1A1A;
+    --gray: #252525;
+    --white: #F5F5F5;
+    --text: #CCCCCC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+section {
+    scroll-margin-top: 75px;
+}
+
+
+/* =================================
+   2. BARRA DE NAVEGACIÓN
+================================= */
+
+.navbar {
+    background-color: rgba(17, 17, 17, 0.97);
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.navbar-brand {
+    color: var(--gold) !important;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navbar-brand span {
+    color: white;
+}
+
+.nav-link {
+    color: var(--white) !important;
+    margin-left: 12px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--gold) !important;
+}
+
+.navbar-toggler {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 5px var(--gold);
+}
+
+.theme-btn {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* =================================
+   3. INICIO
+================================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 70px;
+    background: radial-gradient(circle, #292313, #111111 65%);
+    text-align: center;
+}
+
+.hero-subtitle {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 75px);
+    font-weight: bold;
+    margin-bottom: 15px;
+    animation: fadeInUp 1.2s ease;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero h2 {
+    font-size: clamp(19px, 3vw, 28px);
+    color: var(--text);
+    margin-bottom: 25px;
+}
+
+.hero .container > p:not(.hero-subtitle) {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+
+/* =================================
+   4. BOTONES
+================================= */
+
+.btn-gold {
+    display: inline-block;
+    background: var(--gold);
+    color: #111111;
+    text-decoration: none;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-gold:hover {
+    background: var(--gold-light);
+    color: #111111;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.25);
+}
+
+
+/* =================================
+   5. SECCIONES GENERALES
+================================= */
+
+.section {
+    padding: 100px 0;
+    background-color: var(--black);
+}
+
+.section-alt {
+    background-color: var(--dark);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 55px;
+}
+
+.section-title span {
+    color: var(--gold);
+}
+
+
+/* =================================
+   6. HABILIDADES
+================================= */
+
+.skill-card {
+    background-color: var(--gray);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 12px;
+    padding: 35px 20px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.12);
+}
+
+.skill-card i {
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.skill-card h4 {
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    color: var(--text);
+}
+
+
+/* =================================
+   7. PROYECTOS
+================================= */
+
+.project-card {
+    background-color: var(--gray);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 30px 22px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+ .project-card {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.25);
+}
+
+.project-icon {
+    font-size: 40px;
+    color: var(--gold);
+    margin-bottom: 22px;
+}
+
+.project-card h4 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.project-card span {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+
+/* =================================
+   8. EXPERIENCIA
+================================= */
+
+.experience-card {
+    max-width: 650px;
+    margin: auto;
+    background-color: var(--gray);
+    padding: 40px;
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+}
+
+.experience-card i {
+    color: var(--gold);
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.experience-card p {
+    color: var(--text);
+    line-height: 1.8;
+}
+
+
+/* =================================
+   9. CONTACTO
+================================= */
+
+.form-label {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.form-control {
+    background-color: var(--gray);
+    color: white;
+    border: 1px solid #555555;
+    padding: 12px;
+}
+
+.form-control:focus {
+    background-color: var(--gray);
+    color: white;
+    border-color: var(--gold);
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+.form-control::placeholder {
+    color: #AAAAAA;
+}
+
+
+/* =================================
+   10. PIE DE PÁGINA
+================================= */
+
+.footer {
+    background-color: #080808;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 30px 0;
+}
+
+.footer p {
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.footer i {
+    color: var(--gold);
+}
+
+
+/* =================================
+   11. MODO CLARO
+================================= */
+
+body.light-mode {
+    --black: #F5F5F5;
+    --dark: #E9E9E9;
+    --gray: #FFFFFF;
+    --white: #222222;
+    --text: #555555;
+}
+
+body.light-mode .navbar {
+    background-color: rgba(245, 245, 245, 0.97);
+}
+
+body.light-mode .navbar-brand span {
+    color: #222222;
+}
+
+body.light-mode .navbar-toggler {
+    color: var(--gold);
+}
+
+body.light-mode .hero {
+    background: radial-gradient(circle, #F5EAC5, #F5F5F5 70%);
+}
+
+body.light-mode .form-control {
+    color: #222222;
+}
+
+body.light-mode .form-control:focus {
+    color: #222222;
+}
+
+body.light-mode .footer {
+    background-color: #222222;
+}
+
+
+/* =================================
+   12. ANIMACIONES
+================================= */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =================================
+   13. DISEÑO RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-nav {
+        padding-top: 15px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .hero { 
+        min-height: 90vh;
+    }
+
+    .section {
+        padding: 70px 15px;
+    }
+
+    .section-title {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    .experience-card {
+        padding: 25px;
+    }
+
+}
+
+
+/* =================================
+   14. REDES SOCIALES Y CONTACTO
+================================= */
+
+.contact-description {
+    max-width: 650px;
+    margin: -25px auto 40px;
+    text-align: center;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.social-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.social-section h4 {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    color: var(--gold);
+    font-size: 23px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--gold);
+    color: #111111;
+    transform: translateY(-5px);
+}
+
+/* =================================
+15. IMÁGENES DE LOS PROYECTOS
+================================= */
+
+.project-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--gold);
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.project-image:hover {
+    transform: scale(1.03);
+}
+
+/* =================================
+   16. FOTOGRAFÍA DE INICIO
+================================= */
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    text-align: left;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 650px;
+    animation: entrarIzquierda 1.2s ease both;
+}
+
+/* Contenedor de la fotografía */
+.hero-photo {
+    position: relative;
+    flex: 0 0 420px;
+    width: 420px;
+    height: 420px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: visible;
+
+    /* Aparición y movimiento suave */
+    animation:
+        aparecerFoto 1.2s ease both,
+        flotarFoto 4s ease-in-out 1.2s infinite;
+}
+
+/* Primer marco dorado */
+.hero-photo::before {
+    content: "";
+    position: absolute;
+    width: 410px;
+    height: 410px;
+
+    border: 2px solid var(--gold);
+    border-radius: 150px;
+
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.20);
+}
+
+/* Segundo marco dorado */
+.hero-photo::after {
+    content: "";
+    position: absolute;
+    width: 395px;
+    height: 395px;
+
+    border: 2px solid var(--gold-light);
+    border-radius: 150px;
+}
+
+/* Fotografía */
+.hero-photo img {
+    position: relative;
+    z-index: 2;
+
+    width: 375px;
+    height: 375px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 150px;
+    border: 3px solid var(--gold);
+
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.30);
+}
+
+/* =================================
+   17. ICONOS DE PROGRAMACIÓN
+================================= */
+
+.tech-icon {
+    position: absolute;
+    z-index: 4;
+
+    color: var(--gold);
+    font-size: 32px;
+
+    filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.4));
+
+    pointer-events: none;
+
+    animation: flotarIcono 3.5s ease-in-out infinite;
+}
+
+/* Posición de los cuatro iconos */
+.html-icon {
+    top: 15px;
+    left: 5px;
+}
+
+.css-icon {
+    top: 15px;
+    right: 5px;
+    animation-delay: 0.7s;
+}
+
+.js-icon {
+    bottom: 15px;
+    left: 5px;
+    animation-delay: 1.2s;
+}
+
+.database-icon {
+    bottom: 15px;
+    right: 5px;
+    animation-delay: 1.7s;
+}
+
+/* =================================
+   18. ANIMACIONES
+================================= */
+
+/* Entrada del texto */
+@keyframes entrarIzquierda {
+    from {
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Aparición de la fotografía */
+@keyframes aparecerFoto {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Movimiento suave de la fotografía completa */
+@keyframes flotarFoto {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(12px);
+    }
+}
+
+/* Movimiento individual de los iconos */
+@keyframes flotarIcono {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(12px);
+    }
+}
+
+/* =================================
+   19. ADAPTACIÓN PARA CELULARES
+================================= */
+
+@media (max-width: 768px) {
+
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-photo {
+        flex: none;
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-photo::before {
+        width: 270px;
+        height: 270px;
+        border-radius: 25px;
+    }
+
+    .hero-photo::after {
+        width: 255px;
+        height: 255px;
+        border-radius: 22px;
+    }
+
+    .hero-photo img {
+        width: 240px;
+        height: 240px;
+        border-radius: 18px;
+    }
+
+    .tech-icon {
+        font-size: 24px;
+    }
+
+    .html-icon {
+        top: 5px;
+        left: 0;
+    }
+
+    .css-icon {
+        top: 5px;
+        right: 0;
+    }
+
+    .js-icon {
+        bottom: 5px;
+        left: 0;
+    }
+
+    .database-icon {
+        bottom: 5px;
+        right: 0;
+    }
+}
+
+/* =================================
+20. ACCESIBILIDAD
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-text,
+    .hero-photo,
+    .tech-icon {
+        animation: none !important;
+    }
+}
+
+
+/* =================================
+   BURBUJAS PARA ICONOS TECNOLÓGICOS
+================================= */
+
+.tech-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(26, 26, 26, 0.95);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+
+    color: var(--gold);
+    font-size: 25px;
+
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+
+    transition: 0.3s;
+}
+
+/* Efecto al pasar el cursor */
+.tech-icon:hover {
+    background: var(--gold);
+    color: var(--black);
+    box-shadow: 0 0 22px rgba(212, 175, 55, 0.55);
+}
+
+/* Tamaño en celulares */
+@media (max-width: 768px) {
+    .tech-icon {
+        width: 43px;
+        height: 43px;
+        font-size: 20px;
+    }
+}
